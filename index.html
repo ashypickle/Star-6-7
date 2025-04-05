@@ -1,1 +1,44 @@
-Star 6 7 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>STAR67 Site</title>
+  <style>
+    body {
+      background-color: black;
+      color: #39ff14;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      cursor: url('https://example.com/cursor.gif'), auto;
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    .gif {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚡ STAR67 ROCKS ⚡</h1>
+  <p>Welcome to the ultimate retro webcore experience.</p>
+
+  <img class="gif" src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif" width="200">
+
+  <br><br>
+  <a href="#">Click Me If You Dare</a>
+
+  <audio id="hoverSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+  <script>
+    const link = document.querySelector('a');
+    const sound = document.getElementById('hoverSound');
+
+    link.addEventListener('mouseover', () => {
+      sound.play();
+    });
+  </script>
+</body>
+</html>
+
