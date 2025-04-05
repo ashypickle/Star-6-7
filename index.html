@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>STAR67 Site</title>
+  <meta charset="UTF-8" />
+  <title>STAR67 Rocks</title>
   <style>
+    /* Background image full screen */
     body {
-      background-color: black;
-      color: #39ff14;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.imgur.com/lZ8wTyI.jpg'); /* change to your static image */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
       font-family: 'Courier New', monospace;
-      text-align: center;
-      cursor: url('https://example.com/cursor.gif'), auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-shadow: 1px 1px 2px black;
     }
 
-    a:hover {
-      color: red;
+    /* Link styling */
+    .nav-link {
+      font-size: 2em;
+      margin: 20px;
+      text-decoration: none;
+      color: #39ff14;
+      transition: transform 0.2s ease;
     }
 
-    .gif {
-      margin-top: 20px;
+    .nav-link:hover {
+      transform: scale(1.3);
     }
   </style>
 </head>
 <body>
-  <h1>⚡ STAR67 ROCKS ⚡</h1>
-  <p>Welcome to the ultimate retro webcore experience.</p>
 
-  <img class="gif" src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif" width="200">
+  <a href="about.html" class="nav-link" onmouseover="playSound()">About</a>
+  <a href="projects.html" class="nav-link" onmouseover="playSound()">Projects</a>
+  <a href="contact.html" class="nav-link" onmouseover="playSound()">Contact</a>
 
-  <br><br>
-  <a href="#">Click Me If You Dare</a>
-
-  <audio id="hoverSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+  <!-- Audio hover sound -->
+  <audio id="hoverSound" src="https://www.soundjay.com/button/sounds/button-4.mp3" preload="auto"></audio>
 
   <script>
-    const link = document.querySelector('a');
-    const sound = document.getElementById('hoverSound');
-
-    link.addEventListener('mouseover', () => {
+    function playSound() {
+      const sound = document.getElementById("hoverSound");
+      sound.currentTime = 0;
       sound.play();
-    });
+    }
   </script>
+
 </body>
 </html>
+
 
